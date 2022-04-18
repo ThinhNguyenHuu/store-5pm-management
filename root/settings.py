@@ -95,7 +95,7 @@ DATABASES = {
         'ENFORCE_SCHEMA': False,
         'HOST': 'mongodb+srv://admin:admin@cluster0.9uc3r.mongodb.net/db?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE',
         'USER': 'admin',
-        'password': 'admin',
+        'PASSWORD': 'admin',
     }
 }
 DATABASES['default']['CONN_MAX_AGE'] = None
