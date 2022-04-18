@@ -93,9 +93,9 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'db',
         'ENFORCE_SCHEMA': False,
-        'ClIENT': {
-            'host': 'mongodb+srv://admin:admin@cluster0.9uc3r.mongodb.net/db?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE'
-        }
+        'HOST': 'mongodb+srv://admin:admin@cluster0.9uc3r.mongodb.net/db?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE',
+        'USER': 'admin',
+        'password': 'admin',
     }
 }
 DATABASES['default']['CONN_MAX_AGE'] = None
