@@ -96,7 +96,7 @@ DATABASES = {
         'NAME': 'db',
         'ENFORCE_SCHEMA': False,
         'CLIENT': {
-            'host': 'mongodb+srv://admin:admin@cluster0.9uc3r.mongodb.net/db?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE',
+            'host': 'mongodb+srv://admin:admin@cluster0.hps83.mongodb.net/db?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE',
             'username': 'admin',
             'password': 'admin',
             'name': 'db',
