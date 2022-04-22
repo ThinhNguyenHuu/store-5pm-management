@@ -24,6 +24,9 @@ class OrderDetailInline(BaseAdminInline):
     form = OrderDetailForm
     fields = ('item', 'unit_price', 'discount', 'quantity')
 
+    def has_add_permission(self, request, obj):
+        return True
+
 
 class OrderAdmin(BaseAdmin):
     list_display = (
