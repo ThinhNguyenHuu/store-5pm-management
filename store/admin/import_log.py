@@ -7,6 +7,7 @@ class ImportLogAdmin(BaseAdmin):
     )
     list_filter = ('item', 'user')
     search_fields = ['item', 'user']
+    autocomplete_fields = ['item', 'user']
 
     def has_add_permission(self, request):
         return False

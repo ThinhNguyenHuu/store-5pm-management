@@ -30,8 +30,8 @@ class Item(models.Model):
     feature = models.CharField(choices=ITEM_FEATURE, default='no_hookups', max_length=50)
     size = models.CharField(choices=ITEM_SIZE, default='M', max_length=8)
     color = models.CharField(choices=ITEM_COLOR, default='white', max_length=50)
-    price = models.DecimalField(default=0, max_digits=10, decimal_places=2)
+    price = models.FloatField(default=0)
     quantity = models.PositiveIntegerField(default=0)
 
     def __str__(self):
-        return f'{self.id} | {self.name}'
+        return f'{self.id} | {self.name} | {self.quantity}'
