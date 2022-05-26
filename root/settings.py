@@ -37,6 +37,10 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     '5pmstore.tk',
+    'ec2-13-250-113-200.ap-southeast-1.compute.amazonaws.com',
+    'ip-172-31-25-38.ap-southeast-1.compute.internal',
+    '13.250.113.200',
+    '172.31.25.38',
 ]
 
 
