@@ -37,6 +37,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     '5pmstore.tk',
+    'www.5pmstore.tk',
     '13.213.10.70',
 ]
 
