@@ -6,12 +6,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Execute ssh commands
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SERVER_PORT }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          key: ${{ secrets.SERVER_PRIVATE_KEY }}
-          port: ${{ secrets.SERVER_PORT }}
-          script:
-            echo Hello World
+      - name: Create key file
+        env:
+          SERVER_PRIVATE_KEY: ${{ secrets.SERVER_PRIVATE_KEY }}
+        shell: bash
+        run:
+          echo "$SERVER_PRIVATE_KEY" >> key.pem
+          chmod 400 key.pem
+      - name: Execute ssh command
+        run:
+          ssi -i key.pem ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} ls -l
+
