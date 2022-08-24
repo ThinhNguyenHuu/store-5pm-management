@@ -15,5 +15,5 @@ jobs:
           chmod 400 key.pem
       - name: Execute ssh command
         run:
-          ssh -i key.pem ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} ls -l
+          ssh -o StrictHostKeyChecking=no -i key.pem ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} ls -l
 
