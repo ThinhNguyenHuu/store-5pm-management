@@ -42,14 +42,7 @@ ALLOWED_HOSTS = [
 ]
 
 
-CSRF_TRUSTED_ORIGINS = [
-    'http://5pmstore.tk',
-    'http://www.5pmstore.tk',
-    'http://13.213.10.70',
-    'https://5pmstore.tk',
-    'https://www.5pmstore.tk',
-    'https://13.213.10.70',
-]
+CSRF_TRUSTED_ORIGINS = ['https://5pmstore.tk']
 
 
 # Application definition
