@@ -20,3 +20,15 @@ jobs:
         with:
           push: true
           tags: thinheoh/store-5pm-docker:latest
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute ssh commands
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_PORT }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SERVER_PRIVATE_KEY }}
+          port: ${{ secrets.SERVER_PORT }}
+          script:
+            echo Hello World
