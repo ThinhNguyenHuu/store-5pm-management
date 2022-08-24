@@ -42,7 +42,7 @@ ALLOWED_HOSTS = [
 ]
 
 
-CSRF_TRUSTED_ORIGINS = ['https://*.5pmstore.tk']
+CSRF_TRUSTED_ORIGINS = ['https://5pmstore.tk']
 
 
 # Application definition
