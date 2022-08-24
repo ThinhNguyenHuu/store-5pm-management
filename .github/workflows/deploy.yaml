@@ -15,7 +15,7 @@ jobs:
           chmod 400 key.pem
       - name: Execute ssh command
         run: |
-          ssh -o StrictHostKeyChecking=no -i key.pem ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "docker kill $(docker ps -q)"
+          ssh -o StrictHostKeyChecking=no -i key.pem ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "c=$(docker ps -q) && [[ $c ]] && docker kill $c"
           ssh -o StrictHostKeyChecking=no -i key.pem ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "docker pull thinheoh/store-5pm-docker:latest"
           ssh -o StrictHostKeyChecking=no -i key.pem ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "docker run -d -p 8000:8000 thinheoh/store-5pm-docker"
 
