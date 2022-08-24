@@ -1,0 +1,6 @@
+.terraforms/
+.git/
+docker-compose.yml
+Dockerfile
+.coverage.*
+.venv
