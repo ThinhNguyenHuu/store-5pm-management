@@ -15,5 +15,5 @@ jobs:
           chmod 400 key.pem
       - name: Execute ssh command
         run:
-          ssi -i key.pem ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} ls -l
+          ssh -i key.pem ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} ls -l
 
