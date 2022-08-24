@@ -10,7 +10,7 @@ jobs:
         env:
           SERVER_PRIVATE_KEY: ${{ secrets.SERVER_PRIVATE_KEY }}
         shell: bash
-        run:
+        run: |
           echo "$SERVER_PRIVATE_KEY" >> key.pem
           chmod 400 key.pem
       - name: Execute ssh command
