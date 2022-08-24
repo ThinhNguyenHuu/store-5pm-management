@@ -41,9 +41,9 @@ ALLOWED_HOSTS = [
     '13.213.10.70',
 ]
 
-
 CSRF_TRUSTED_ORIGINS = ['https://5pmstore.tk', 'https://www.5pmstore.tk']
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
