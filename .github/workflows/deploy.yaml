@@ -7,8 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo
-        run: |
-          echo ${{ toJSON(github.event) }}
+        run: exit 1
+      - name: Echo 2
+        run: echo aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 #  create-docker-image:
 #    runs-on: ubuntu-latest
 #    steps:
